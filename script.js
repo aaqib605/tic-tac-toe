@@ -83,8 +83,8 @@ function endGame(draw) {
     winningMessageTextElement.innerText = `${
       circleTurn ? "O's " : "X's "
     } Win!`;
+    showConfetti();
   }
-  showConfetti();
   winningMessageElement.classList.add("show");
 }
 
