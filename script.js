@@ -84,6 +84,7 @@ function endGame(draw) {
       circleTurn ? "O's " : "X's "
     } Win!`;
   }
+  showConfetti();
   winningMessageElement.classList.add("show");
 }
 
@@ -96,3 +97,13 @@ function isDraw() {
 }
 
 restartButton.addEventListener("click", startGame);
+
+function showConfetti() {
+  const jsConfetti = new JSConfetti();
+
+  jsConfetti.addConfetti({
+    emojis: ["🎉", "🥳", "🍾", "🪅", "🎈", "🎊", "🪅"],
+  });
+
+  jsConfetti.addConfetti();
+}
